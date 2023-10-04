@@ -24,7 +24,7 @@ const Footer = () => {
                     </div>
                     <div className="copyright-2022-elite-bridge-business-solution-india-llp-all-rights-reserved">
                         Copyright © 2022 EliteBridge Business Solution India LLP - All Rights
-                        Reserved
+                        Reserved ak
                     </div>
                 </div>
                 <div className="socialmedia">
