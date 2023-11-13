@@ -24,17 +24,18 @@ const Signup = ({ setIsUserLoggedIn }) => {
   };
 
 
-  const containerStyle = {
-    height: '580px',
-    width: '480px',
-    backgroundColor: '#F7FBFF',
-    boxShadow: '4px 4px 10px rgb(128, 128, 128)',
-    position: 'relative',
-    overflow: 'hidden',
-    borderRadius: '20px',
-    marginTop: '30px',
+  // const containerStyle = {
+  //   height: '580px',
+  //   width: '480px',
+  //   backgroundColor: '#F7FBFF',
+  //   boxShadow: '4px 4px 10px rgb(128, 128, 128)',
+  //   position: 'relative',
+  //   overflow: 'hidden',
+  //   borderRadius: '20px',
+  //   marginTop: '30px',
 
-  };
+  // };
+  
   //   const mediaQueryStyle = {
   //     '@media screen and (max-width: 768px)': {
   //       height: '500px',
@@ -55,14 +56,17 @@ const Signup = ({ setIsUserLoggedIn }) => {
   };
 
   const loginSignupStyle = {
-    fontSize: '20px',
+    fontSize: '20px', 
     border: 'none',
     outline: 'none',
     backgroundColor: 'transparent',
     position: 'relative',
     cursor: 'pointer',
     fontWeight :'600',
-    paddingTop:'50px'
+    paddingTop:'50px', '@media screen and (max-width: 768px)': {
+      fontSize: '18px',
+      paddingTop: '30px',
+    },
   };
 
   const sliderStyle = {
@@ -97,7 +101,7 @@ const Signup = ({ setIsUserLoggedIn }) => {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: '0px 100px',
+    padding: '0px 10px',
   };
 
   const loginBoxStyle = {
@@ -160,6 +164,7 @@ const Signup = ({ setIsUserLoggedIn }) => {
 
     if(confirmedpass != password){
       alert('Password is not matching');
+      return
     }
 
     const enteredEmail = email;
@@ -268,7 +273,13 @@ const handleSubmit = async (e) => {
 
   return (
     <Container>
-      <div style={containerStyle}>
+      <Signupcontainer>
+
+        <style>
+
+        </style>
+  
+      <div className='containerStyled'>
         <div style={btnStyle}>
           <button
             style={loginSignupStyle}
@@ -286,50 +297,52 @@ const handleSubmit = async (e) => {
           </button>
         </div>
 
-        <div
-          style={
-            isLoginVisible
-              ? { ...formSectionStyle }
-              : { ...formSectionStyle, ...formSectionMoveStyle }
-          }
+        <div className={`form-section ${isLoginVisible ? '' : 'move'}`}
+          // style={
+          //   isLoginVisible
+          //     ? { ...formSectionStyle }
+          //     : { ...formSectionStyle, ...formSectionMoveStyle }
+          // }
         >
-          <div className="login-box" style={loginSignupBoxStyle}>
-            <input type="email" className="email ele" placeholder="youremail@example.com"
+          <div className="login_box" style={loginSignupBoxStyle}>
+            <input type="email" className="inputStyle" placeholder="youremail@example.com"
              value={loginEmail}
               onChange={(e) => setLoginEmail(e.target.value)} 
-              style={inputStyle} required/>
-            <input type="password" className="password ele" placeholder="Enter Your Password"
+               required/>
+            <input type="password" className="inputStyle" placeholder="Enter Your Password"
             value={loginPassword}
             onChange={(e) => setLoginPassword(e.target.value)}
-             style={inputStyle} required />
+             required />
             <button className="clkbtn"
             onSubmit={handleSubmit}
              onClick={handleSubmit}
              style={buttonStyle}>Login</button>
+             <a href="/forgetpassword">Forgot Password</a>
           </div>
 
           <div className="signup-box" style={{ ...loginSignupBoxStyle, ...signupBoxStyle }}>
-            <input type="text" className="name ele" placeholder="Enter your Name*"
+            <input type="text" className="inputStyle" placeholder="Enter your Name*"
               value={Name}
               onChange={(e) => setName(e.target.value)}
-              style={inputStyle} required />
-            <input type="email" className="email ele" placeholder="youremail@example.com*"
+               required />
+            <input type="email" className="inputStyle" placeholder="youremail@example.com*"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              style={inputStyle} required
+               required
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
-            <input type="password" className="password ele" placeholder="Enter Your Password(Min 8char)*"
+            <input type="password" className="inputStyle" placeholder="Enter Your Password(Min 6char)*"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              style={inputStyle} required />
-            <input type="password" className="password ele" placeholder="Confirm Password*"
+               required />
+            <input type="password" className="inputStyle" placeholder="Confirm Password*"
               value={confirmedpass}
               onChange={(e) => setconfirmedpass(e.target.value)}
-              style={inputStyle} required/>
+              required/>
             <button className="clkbtn" type="submit" onSubmit={handleRegistration} onClick={handleRegistration} style={buttonStyle}>Signup</button>
           </div>
         </div>
       </div>
+      </Signupcontainer>
       <img src='\images\Side Images.png' alt='ImG'></img>
     </Container>
   )
@@ -351,16 +364,109 @@ align-items: center;
 img{
   width: 480px;
   height: 500px;
-  @media screen and (max-width : 400px){
+  @media screen and (max-width : 420px){
     display: none;
 }
 }
 
-.login-box{
-  @media screen and (max-width : 400px){
+.containerStyled{
+  height: 580px;
+  width: 480px;
+  background-color: #F7FBFF;
+  box-shadow: 4px 4px 10px rgb(128, 128, 128);
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.active{
+  color: #265182;
+}
 
+.form-section {
+  height: 500px;
+  width: 990px;
+  padding: 20px 0;
+  display: flex;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  left: 0px;
+}
+
+.form-section.move {
+  left: -500px;
+}
+
+.login_box{
+
+    height: 100%;
+    width: 500px;
+    display: flex;
+    //flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 100px;
+
+    a{
+      padding-top: 25px;
+    }
+}
+.inputStyle {
+    height: 50px;
+    width: 320px;
+    outline: none;
+    border: none;
+    color: rgb(77, 77, 77);
+    background-color: rgb(240, 240, 240);
+    border-radius: 50px;
+    padding-left: 25px;
+    font-size: 16px;
+}
+  @media screen and (min-width:250px) and (max-width:420px) 
+  {
+    .login_box{
+
+    width: 400px;
+    padding: 0 50px;
+
+    }
+    .containerStyled{
+      height: 500px;
+      width: 330px;
+      margin-bottom: 50px;  
+    }
+
+    .form-section {
+  height: 400px;
+  width: 700px;
+  padding: 20px 0;
+  display: flex;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  left: 0px;
+}
+
+  .form-section.move {
+    left: -360px;
   }
+  .inputStyle {
+    height: 40px;
+    width: 260px;
+    padding-left: 1px;
+    font-size: 14px;
+}
 }
 
 
+
+
 `
+
+const Signupcontainer = styled.div`
+     /* @media screen and (min-width:250px) and (max-width:420px) 
+  {
+      height: 580px;
+      width: 480px;
+    } */
+`
+

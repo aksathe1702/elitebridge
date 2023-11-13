@@ -11,7 +11,7 @@ const ProdServ = () => {
     <div className="row">
       <div className="col-sm-5">
         <div className='pic auto img-fluid'>
-        <img src='public\images\Automotive & Manufacturing.jpg'/>
+        {/* <img src='public\images\Automotive & Manufacturing.jpg'/> */}
         </div>
       </div>
       <div className="col-sm-7">

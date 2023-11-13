@@ -15,6 +15,7 @@ const Verifaction = () => {
       .sendEmailVerification()
       .then(() => {
         console.log('Verification email sent.');
+        alert('Verification email sent.')
        // setIsUserLoggedIn(true);
       })
       .catch((error) => {
@@ -302,5 +303,5 @@ margin-left: 65px;
     align-items: center;
   }
 }
-}
+
 `

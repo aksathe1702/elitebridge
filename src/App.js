@@ -12,7 +12,8 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Middle/Footer';
 import { useState } from 'react';
-import Forgot from './components/Forgot'
+import Forgotpass from './components/Forgotpass';
+
 
 function App() {
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
@@ -22,7 +23,7 @@ function App() {
    
 
     <Router> 
-    <Header isUserLoggedIn={isUserLoggedIn}/>
+    <Header isUserLoggedIn={isUserLoggedIn} setIsUserLoggedIn={setIsUserLoggedIn}/>
         <Routes>
           <Route path ="/" element ={<Main/>}/>
           <Route path ="/careers" element ={<Carrer/>}/>
@@ -33,7 +34,7 @@ function App() {
           <Route path ="/about" element ={<About/>}/>
           <Route path ="/contactus" element ={<Contact/>}/>
           <Route path ="/about" element ={<About/>}/>
-          <Route path ="/forgot" element ={<Forgot/>}/>
+          <Route path ="/forgetpassword" element ={<Forgotpass/>}/>
         </Routes>
         <Footer/>
       </Router>

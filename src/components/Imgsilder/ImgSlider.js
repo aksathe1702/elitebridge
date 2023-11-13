@@ -93,18 +93,7 @@ function ImgSlider() {
 export default ImgSlider
 
 const Container = styled.div`
-@media screen and (max-width:768px){
-  height:420px;
- }
- 
-@media screen and (min-width:280px) and (max-width:414px){
-    height:250px;
-}
-
-
-@media screen and (min-width:820px) and (max-width:912px) {
-    height:550px;
-}
+   
 `
 const TextContent = styled.div`
 
@@ -190,25 +179,23 @@ const Heading = styled.div`
         }
 }
 
+@media screen and (min-width:780px) and (max-width:912px){
+    font-size: 250%;
+        //padding-left: 68px;
+        justify-content: center;
+        padding-left: 50px;
 
 
-@media screen and (min-width:820px) and (max-width:912px) {
-    font-size: 190%;
-    //padding-left: 68px;
-    justify-content: center;
-   
-    padding-top: 40px;
-    font-size: 50px;
+        span{
+            &:before {
 
-    span{
-        &:before {
-
-    //left:245px;
-    left: 103%;
-}
-
+        //left:245px;
+        left: 103%;
     }
+
+        }
 }
+
 `
 const Bullet = styled.div`
     position: absolute;
@@ -237,12 +224,31 @@ const Bullet = styled.div`
     @media screen and (max-width:768px){
    display: none;
     }
+    @media screen and (min-width:780px) and (max-width:912px){
+        position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 250px;
+    align-items: center;
+    margin-left:60px;
 
-    
+    div{
+        width: 15px;
+        height: 15px;
+        background-color:#F58E49;
+        border-radius: 50%;
+        
+    }
 
-@media screen and (min-width:820px) and (max-width:912px) {
-    top: 230px;
-}
+    span{
+        color: #F7FBFF;
+        font-size: 16px;
+        font-family: "Source Sans Pro-Bold", Helvetica;
+        padding-left: 20px;
+        font-weight: 600;
+        letter-spacing: 1.05px;
+    }
+    }
 `
 const Bullet1 = styled.div`
     position: absolute;
@@ -271,12 +277,31 @@ const Bullet1 = styled.div`
     @media screen and (max-width:768px){
    display: none;
     }
+    @media screen and (min-width:780px) and (max-width:912px){
+        position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 290px;
+    align-items: center;
+    margin-left:60px;
 
-
-    @media screen and (min-width:820px) and (max-width:912px) {
-        top: 320px;
+    div{
+        width: 15px;
+        height: 15px;
+        background-color:#F58E49;
+        border-radius: 50%;
+        
     }
-    
+
+    span{
+        color: #F7FBFF;
+        font-size: 16px;
+        font-family: "Source Sans Pro-Bold", Helvetica;
+        padding-left: 20px;
+        font-weight: 600;
+        letter-spacing: 1.05px;
+    }
+    }
 `
 const Bullet2 = styled.div`
     position: absolute;
@@ -305,10 +330,31 @@ const Bullet2 = styled.div`
     @media screen and (max-width:768px){
    display: none;
     }
-    
-@media screen and (min-width:820px) and (max-width:912px) {
-    top: 380px;
-}
+    @media screen and (min-width:780px) and (max-width:912px){
+        position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 330px;
+    align-items: center;
+    margin-left:60px;
+
+    div{
+        width: 15px;
+        height: 15px;
+        background-color:#F58E49;
+        border-radius: 50%;
+        
+    }
+
+    span{
+        color: #F7FBFF;
+        font-size: 16px;
+        font-family: "Source Sans Pro-Bold", Helvetica;
+        padding-left: 20px;
+        font-weight: 600;
+        letter-spacing: 1.05px;
+    }
+    }
 `
 const Bullet3 = styled.div`
     position: absolute;
@@ -337,10 +383,31 @@ const Bullet3 = styled.div`
     @media screen and (max-width:768px){
    display: none;
     }
-    
-@media screen and (min-width:820px) and (max-width:912px) {
-    top: 440px;
-}
+    @media screen and (min-width:780px) and (max-width:912px){
+        position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 370px;
+    align-items: center;
+    margin-left:60px;
+
+    div{
+        width: 15px;
+        height: 15px;
+        background-color:#F58E49;
+        border-radius: 50%;
+        
+    }
+
+    span{
+        color: #F7FBFF;
+        font-size: 16px;
+        font-family: "Source Sans Pro-Bold", Helvetica;
+        padding-left: 20px;
+        font-weight: 600;
+        letter-spacing: 1.05px;
+    }
+    }
 `
 
 const Button = styled.div`
@@ -416,9 +483,17 @@ const Button = styled.div`
 }
 }
 
-@media screen and (min-width:820px) and (max-width:912px) {
-    top: 520px;
+@media screen and (min-width:780px) and (max-width:912px){
+    position: absolute;
+    top:435px;
+    z-index: 1;
+    margin-left: 60px;
+    cursor: pointer;
+    
 }
+
+
+
 `
 const Carousel = styled(Slider)`
 
@@ -433,6 +508,11 @@ const Carousel = styled(Slider)`
    @media screen and (min-width:250px) and (max-width:420px) 
 {
     min-height:250px;
+}
+
+@media screen and (min-width:780px) and (max-width:912px){
+    
+    min-height:470px;
 }
 
    
@@ -502,11 +582,8 @@ const Wrap = styled.div`
 }
 
 
-@media screen and (min-width:800px) and (max-width:912px){
-img
-{
-    height:520px;
-}
+@media screen and (min-width:780px) and (max-width:912px){
+
 }
 
 

@@ -1,0 +1,330 @@
+.Nav{
+  /* background-color:;  */
+  background-color: #f7fbff;
+  min-height: 82px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navmenu{
+  /* //display:block ; */
+  justify-content: space-around;
+}
+
+.logo img{
+  margin-left: 110px;
+  padding-top: 20px; 
+}
+
+.navmenu span{
+    color: #4b4c4d;
+    font-family: "Source Sans Pro-SemiBold", Helvetica;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    padding: 0 14px;
+}
+.navmenu a{
+  text-decoration: none;
+}
+
+.signup span{
+  cursor: pointer;
+  text-decoration: none;
+    margin-right: 110px;
+    background-color: #265182;
+    border-radius: 12px;
+    /* height: 59px;
+    width: 120px; */
+    padding: 15px 40px;
+    font-family: "Source Sans Pro-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    color: #f7fbff;
+    letter-spacing: 1.2px;
+}
+
+.signup a{
+  text-decoration: none;
+}
+
+.user-icon img{
+  width: 40px;
+  height: 40px;
+  margin-right:120px ;
+}
+
+@media screen and (max-width : 420px){
+  .navmenu{
+    display: none;
+  }
+  .logo img{
+    margin-left: 30px;
+    padding-top: 20px;
+    width: 130px; 
+  }
+  .signup span{
+    margin-right: 1px;
+    padding: 12px 30px;
+    font-family: "Source Sans Pro-Bold", Helvetica;
+    font-size: 16px;
+  }
+
+}
+
+@media screen and (max-width :819px){
+  .navmenu{
+    display: none;
+  }
+  .logo img{
+    margin-left: 30px;
+    padding-top: 20px;
+    width: 150px; 
+  }
+  .signup span{
+    margin-right: 1px;
+    padding: 12px 30px;
+    font-family: "Source Sans Pro-Bold", Helvetica;
+    font-size: 16px;
+  }
+
+}
+
+@media screen and (min-width:820px) and (max-width:1102px) {
+  .logo img{
+    margin-left: 60px;
+    padding-top: 20px; 
+    width: 120px;
+  }
+  .navmenu span{
+    color: #4b4c4d;
+    font-family: "Source Sans Pro-SemiBold", Helvetica;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    padding: 0 5px;
+}
+.signup span{
+  cursor: pointer;
+  text-decoration: none;
+    margin-right: 40px;
+    background-color: #265182;
+    border-radius: 12px;
+    /* height: 59px;
+    width: 120px; */
+    padding: 12px 30px;
+    font-family: "Source Sans Pro-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    color: #f7fbff;
+    letter-spacing: 1.2px;
+}
+
+}
+
+@media screen and (min-width:1103px) and (max-width:1224px)
+{
+  .navmenu span{
+    color: #4b4c4d;
+    font-family: "Source Sans Pro-SemiBold", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    padding: 0 10px;
+}
+}
+
+@media screen and (min-width:1225px) and (max-width:1324px)
+{
+  .navmenu span{
+    color: #4b4c4d;
+    font-family: "Source Sans Pro-SemiBold", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    padding: 0 10px;
+}
+}
+
+
+
+
+/* .box {
+  /* background-color: #f7fbff; 
+  background-color: red;
+  min-height: 82px;
+  position: relative;
+  width: 100%;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .box .nav-bar-wrapper {
+    border: 0px none;
+    height: 82px;
+    width: 100%;
+  }
+  
+  .box .nav-bar {
+    height: 82px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .box .overlap {
+    height: 82px;
+    position: relative;
+  }
+  
+  .box .overlap-wrapper {
+    height: 82px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .box .overlap-group {
+    height: 82px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .box .navmenu {
+    height: 82px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .box .div {
+    background-color: #f7fbff;
+    height: 82px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .box .text-wrapper {
+    color: #4b4c4d;
+    font-family: "Source Sans Pro-Bold", Helvetica;
+    font-size: 22px;
+    font-weight: 700;
+    left: 525px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 26px;
+    width: 58px;
+  }
+  
+  .box .text-wrapper-2 {
+    color: #4d4d4d;
+    font-family: "Source Sans Pro-Bold", Helvetica;
+    font-size: 22px;
+    font-weight: 700;
+    left: 407px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 26px;
+    width: 58px;
+  }
+  
+  .box .product-services {
+    color: #4b4c4d;
+    font-family: "Source Sans Pro-Bold", Helvetica;
+    font-size: 22px;
+    font-weight: 700;
+    left: 627px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 26px;
+    width: 183px;
+  }
+  
+  .box .text-wrapper-3 {
+    color: #000000b2;
+    font-family: "Source Sans Pro-Bold", Helvetica;
+    font-size: 22px;
+    font-weight: 700;
+    left: 870px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 26px;
+    width: 100px;
+  }
+  
+  .box .text-wrapper-4 {
+    color: #000000b2;
+    font-family: "Source Sans Pro-Bold", Helvetica;
+    font-size: 22px;
+    font-weight: 700;
+    left: 1017px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 26px;
+    width: 76px;
+  }
+  
+  .box .contact-us {
+    color: #000000b2;
+    font-family: "Source Sans Pro-Bold", Helvetica;
+    font-size: 22px;
+    font-weight: 700;
+    left: 1141px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 26px;
+    width: 110px;
+  }
+  
+  .box .white-BG-LOGO-with {
+    height: 55px;
+    left: 118px;
+    object-fit: cover;
+    position: absolute;
+    top: 27px;
+    width: 162px;
+  }
+  
+  .box .signbtn {
+    height: 29px;
+    left: 1271px;
+    position: absolute;
+    top: 25px;
+    width: 80px;
+  }
+  
+  .box .div-wrapper {
+    background-color: #265182;
+    border-radius: 12px;
+    height: 29px;
+    position: relative;
+    width: 78px;
+  }
+  
+  .box .text-wrapper-5 {
+    color: #ffffff;
+    font-family: "Source Sans Pro-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    left: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 3px;
+  }
+  */

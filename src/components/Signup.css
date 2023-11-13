@@ -1,0 +1,132 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .container img {
+    width: 480px;
+    height: 500px;
+  }
+  
+  @media screen and (max-width: 420px) {
+    .container img {
+      display: none;
+    }
+  }
+  
+  .containerStyled {
+    height: 580px;
+    width: 480px;
+    background-color: #f7fbff;
+    box-shadow: 4px 4px 10px rgb(128, 128, 128);
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 30px;
+  }
+  
+  @media screen and (min-width: 250px) and (max-width: 420px) {
+    .login_box {
+      width: 400px;
+      padding: 0 50px;
+    }
+    .containerStyled {
+      height: 450px;
+      width: 330px;
+      margin-bottom: 50px;
+    }
+  }
+  
+  .btnStyle {
+    height: 40px;
+    width: 280px;
+    margin: 20px auto;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .login {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    font-weight: 600;
+    padding-top: 50px;
+  }
+  
+  .signup {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .active {
+    background-image: linear-gradient(to right, rgb(255, 195, 110), rgb(255, 146, 91));
+    color: white;
+    border-radius: 50px;
+  }
+  
+  .formSectionStyle {
+    height: 500px;
+    width: 990px;
+    padding: 20px 0;
+    display: flex;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    left: 0px;
+  }
+  
+  .formSectionMoveStyle {
+    left: -500px;
+  }
+  
+  .loginSignupBoxStyle {
+    height: 100%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 100px;
+  }
+  
+  .loginBox {
+    gap: 50px;
+  }
+  
+  .signupBox {
+    gap: 10px;
+  }
+  
+  .inputStyle {
+    height: 50px;
+    width: 320px;
+    outline: none;
+    border: none;
+    color: rgb(77, 77, 77);
+    background-color: rgb(240, 240, 240);
+    border-radius: 50px;
+    padding-left: 25px;
+    font-size: 16px;
+  }
+  
+  .buttonStyle {
+    height: 40px;
+    width: 130px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, rgb(255, 195, 110), rgb(255, 146, 91));
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 24px;
+    font-weight: 600;
+  }
+  

@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 import React from 'react'
 import { styled } from 'styled-components'
 
@@ -121,8 +132,69 @@ height: 600px;
 }
 
 
-@media screen and (min-width:280px) and (max-width:414px){
+@media screen and (min-width:392px) and (max-width:424px){
     overflow-x: hidden;
+    display:block;
+    padding: 0px 1px;
+    text-align:justify;
+   height:530px;
+    //justify-content: center;
+
+    .line-5 {
+  display: none;
+}
+.line-4{
+  display: none;
+  
+}
+.elite-bridge-text {
+  padding: 0px;
+  padding-top:0;
+  padding-left:0px;
+}
+
+.paragraph {
+  font: 700 14px/22px "Source Sans Pro", sans-serif;
+ padding-top:20px;
+  /* position: absolute;
+  left: 137px;
+  top: 952px; */
+  width: 63%;
+  padding:30px;
+}
+
+.qualitybtn{
+    display: block;
+    justify-content: center;
+    margin-left: 50px;
+
+}
+.quality{
+    width: 280px;
+    height: 55px;
+    background: rgba(245, 142, 73, 0.63);
+    border-radius: 16px;
+    margin-top: 12px;
+}
+
+.RightPart img{
+    display:none;
+
+}
+.elite-bridge-business-solutions-india-llp {
+
+  font: 700 15px/30px "Source Sans Pro", sans-serif;
+  margin-bottom:0px;
+  /* position: absolute;
+  left: 137px;
+  top: 856px; */
+  padding-left:30px;
+}
+
+}
+
+@media screen and (min-width:281px) and (max-width:391px){
+  overflow-x: hidden;
     display:block;
     padding: 0px 10px;
     text-align:justify;
@@ -148,14 +220,15 @@ height: 600px;
   /* position: absolute;
   left: 137px;
   top: 952px; */
-  width: 55%;
-  padding:30px;
+  width: 60%;
+  padding:15px;
+  margin: 1px;
 }
 
 .qualitybtn{
     display: block;
     justify-content: center;
-    margin-left: 20px;
+    margin-left: 50px;
 
 }
 .quality{
@@ -172,14 +245,13 @@ height: 600px;
 }
 .elite-bridge-business-solutions-india-llp {
 
-  font: 700 14px/30px "Source Sans Pro", sans-serif;
+  font: 700 15px/30px "Source Sans Pro", sans-serif;
   margin-bottom:0px;
   /* position: absolute;
   left: 137px;
   top: 856px; */
-  padding-left:30px;
+  padding-left:20px;
 }
-
 }
 @media screen and (width : 540px)
 {
@@ -408,6 +480,4 @@ padding: 0px 20px;
   }
 }
 
-
-}
 `

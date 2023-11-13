@@ -30,17 +30,16 @@ const Middle = () => {
           </div>
           <div className="frame-2">
             <div className="we-are-open-for-opportunities">
-              We Are Open For <br />
-              Opportunities!
+            Free Online Demo- Industrial vending Machine
             </div>
 
             <div className="appointment">
-              <div className="make-an-appointment">Make An Appointment</div>
+              <div className="make-an-appointment"> <a href="https://forms.gle/NRqkvnGPMyqCCS1u6" className='request'>Request Free Demo</a></div>
             </div>
           </div>
         </div>
         <div className="wrapper1">
-          <div className="whychoose">Why Choose Us</div>
+          <div className="whychoose">Why Choose Us?</div>
           <div className="section">
             <div className="contentsection">
               <p>Industry Expertise</p>
@@ -48,14 +47,14 @@ const Middle = () => {
             </div>
             <div className="contentsection">
               <p>Seamless Procurement</p>
-              <span>Our platform connects customers and suppliers, streamlining the procurement process for your convenience.t</span>
+              <span>Our platform connects customers and suppliers, streamlining the procurement process for your convenience.</span>
             </div>
             <div className="contentsection">
-              <p>Comprehensive Solutions</p>
-              <span>Find everything you need under one roof, from industrial equipment to tool management systems.t</span>
+              <p>Comprehensive Solutions</p><br/>
+              <span>Find everything you need under one roof, from industrial equipment to tool management systems.</span>
             </div>
             <div className="contentsection">
-              <p>CAD, CAM & CAE Service</p>
+              <p>CAD, CAM & CAE Service</p><br/>
               <span>Our experts provide top-notch services in computer-aided design, manufacturing, and engineering.</span>
             </div>
             <div className="contentsection">
@@ -99,7 +98,11 @@ const Container = styled.div`
     z-index: -1;
     position: absolute;
 }
-
+.request
+{
+text-decoration:none;
+color:white;
+}
 .heading1{
     font-family: "Source Sans Pro-SemiBold", Helvetica;
     display: flex;
@@ -115,9 +118,9 @@ const Container = styled.div`
 .wrap1{
     //justify-content: space-around;
    // overflow-x: hidden;
-   padding: 40px;
-   padding-right:160px;
-    width: 1240px;
+   padding-top: 10px;
+   padding-right:130px;
+    width: 100%;
     justify-content: space-around;
     display: flex;
   
@@ -159,14 +162,18 @@ margin-left:22px;
 border-radius: 16px;
 }
 .industry_auto{
-  margin-left:40px;
+  margin-left:50px;
+  font-weight: 600;
  
   }
   .industry_inven{
-    margin-left:40px;
+    margin-left:60px;
+    font-weight: 600;
     }
     .industry_cons{
-      margin-left:40px;
+      margin-left:50px;
+      font-weight: 600;
+      //text-align: center;
       
       }
 .container2{
@@ -194,14 +201,16 @@ border-radius: 16px;
 }
 .frame-2 {
   background: #265182;
-  border-radius: 0px 36px 36px 0px;
+  border-radius: 36px 0px 0px 36px;
   width: 257px;
   height: 155px;
   position: relative;
   overflow: hidden;
-  top: 40%;
+  top: 50%;
   //bottom : 1px;
   position:fixed;
+  right: 0;
+  //left:80%;
   z-index: 1;
   //align-items: center;
 }
@@ -284,7 +293,7 @@ border-radius: 16px;
   width: 331px;
   height: 42px;
 }
-@media screen and (min-width:250px) and (max-width:400px) 
+@media screen and (min-width:250px) and (max-width:409px) 
 {
     margin: 0;
     padding: 0;//
@@ -312,9 +321,11 @@ border-radius: 16px;
 }
 
 .wrap1{
-   padding: 40px;
+   padding: 30px;
     width: 270px;
-    justify-content: space-between;
+    margin-right: 20px;
+    padding-left:140px;
+    //justify-content: space-between;
 }
 
 .automation img{
@@ -352,7 +363,6 @@ margin-left: 20px;
     .industry_cons{
       font-size:16px;
       margin-left:16px;
-      
      }
     
 .container2{
@@ -409,7 +419,7 @@ margin-left: 20px;
 }
 
 
-@media screen and (min-width:405px) and (max-width:460px) 
+@media screen and (min-width:410px) and (max-width:460px) 
 {
     margin: 0;
     padding: 0;//
@@ -420,7 +430,7 @@ margin-left: 20px;
     //flex-direction: column;
     //align-items: center;
     height: 400px;
-    width:390px;
+    width:380px;
     ////max-width: 1440px;
     /* padding: 40px; */
 
@@ -440,9 +450,11 @@ margin-left: 20px;
 }
 
 .wrap1{
-   padding: 40px;
+   //padding: 40px;
+   padding-top: 10px;
     width: 270px;
     justify-content: space-between;
+    padding-right:60px;
 }
 
 .automation img{
@@ -455,22 +467,22 @@ margin-left:10px;
 .inventory1 img{
 width: 90px;
 height: 147px;
-margin-left: 30px;
+margin-left: 10px;
 
 }
 
 .industry_auto{
-  font-size:18px;
+  font-size:16px;
   margin-left:10px;
   margin-right:14px;
   }
   .industry_inven{
-    font-size:18px;
+    font-size:16px;
     margin-left:20px;
     margin-right:14px;
     }
     .industry_cons{
-      font-size:18px;
+      font-size:16px;
       margin-left:40px;
       
       }
@@ -478,7 +490,7 @@ margin-left: 30px;
     //display: flex;
 width: 90px;
 height: 147px;
-margin-left: 50px;
+margin-left: 10px;
 
 }
 
@@ -567,7 +579,7 @@ margin-left: 50px;
 }
 
 .wrap1{
-   padding: 40px;
+   padding: 20px;
     width: 270px;
     justify-content: space-between;
 }
@@ -664,7 +676,7 @@ margin-left: 40px;
 @media screen and (min-width:470px) and (max-width:540px)
 {
     margin: 0;
-    padding: 0;
+    padding: 0;//
     //height: 400px;
     width:400px;
 

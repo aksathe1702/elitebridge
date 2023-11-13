@@ -2,42 +2,42 @@ import React from 'react'
 import { styled } from 'styled-components'
 
 const Footer = () => {
-    return (
-        <Container>
-            <div className='footer'>
-                <img
-                    className="white-bg-logo-with-tagline"
-                    src="\images\White_BG_LOGO_with tagline.svg"
-                />
+  return (
+    <Container>
+      <div className='footer'>
+        <img
+          className="white-bg-logo-with-tagline"
+          src="\images\White_BG_LOGO_with tagline.svg"
+        />
 
-                <div className="middlesection">
-                    <div className="footer-link-tab">
-                        <div className="home">Home</div>
+        <div className="middlesection">
+          <div className="footer-link-tab">
+            <div className="home"><a href="/productandservices" className='footerlink'>Home</a></div>
 
-                        <div className="home">Products & Services</div>
+            <div className="home"><a href="/productandservices" className='footerlink'>Products & Services</a></div>
 
-                        <div className="home">Industries</div>
+            <div className="home"><a href="/industry" className='footerlink'>Industries</a></div>
 
-                        <div className="home">Careers</div>
+            <div className="home"><a href="careers" className='footerlink'>Careers</a></div>
 
-                        <div className="home">Contact Us</div>
-                    </div>
-                    <div className="copyright-2022-elite-bridge-business-solution-india-llp-all-rights-reserved">
-                        Copyright © 2022 EliteBridge Business Solution India LLP - All Rights
-                        Reserved ak
-                    </div>
-                </div>
-                <div className="socialmedia">
-                    <img className="youtube" src="\images\youtube.png" />
+            <div className="home"><a href="contactus" className='footerlink'>Contact Us</a></div>
+          </div>
+          <div className="copyright-2022-elite-bridge-business-solution-india-llp-all-rights-reserved">
+            Copyright © 2022 EliteBridge Business Solution India LLP - All Rights
+            Reserved
+          </div>
+        </div>
+        <div className="socialmedia">
+          <a href="https://youtube.com/@elitebridgeknowledgecentre705"> <img className="youtube" src="\images\youtube.png" /></a>
 
-                    <img className="linkedin" src="\images\linkedin.png" />
+          <a href="https://www.linkedin.com/company/elitebridge-india/"> <img className="linkedin" src="\images\linkedin.png" /></a>
 
-                    <img className="instagram" src="\images\instagram.png" />
-                </div>
+          <a href="https://instagram.com/elitebridge_india?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"><img className="instagram" src="\images\instagram.png" /></a>
+        </div>
 
-            </div>
-        </Container>
-    )
+      </div>
+    </Container>
+  )
 }
 
 export default Footer
@@ -57,6 +57,11 @@ padding: 50px 0;
         margin: 0 120px;
         justify-content: space-around;
         align-items: center;
+}
+.footerlink
+{
+ text-decoration:none;
+ color:black;
 }
 .youtube {
   width: 24.98px;
@@ -111,9 +116,6 @@ padding: 50px 0;
 .white-bg-logo-with-tagline {
   /* width: 160.89px;
   height: 56.51px; */
-  display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 @media screen and (max-width:420px){
@@ -164,7 +166,7 @@ padding: 50px 0;
   justify-content: center;
 }
 .footer-link-tab {
-  width: 100%;
+  width: 96%;
   height: 15.41px;
   position: static;
   display: flex;
@@ -195,12 +197,12 @@ padding: 50px 0;
 @media screen and (min-width:570px) and (max-width:838px){
 
   justify-content: center;
-  padding-top: 10px;
+  padding-top: 60px;
   width: 100%;
  img{
     //justify-content: center;
     //padding-left: 30px;
-    margin-left: 110px;
+    margin-left: 80px;
   }
   .footer {
         display: flex;
@@ -209,26 +211,25 @@ padding: 50px 0;
         //justify-content: center;
 }
 .socialmedia{
-  margin-left: 100px;
+  margin-left: 70px;
   padding-bottom: 25px;
-  
 }
 .youtube {
   width: 24.98px;
   height: 25.69px;
-  margin: 5px 15px;
+  margin: 0 15px;
   //padding: 20px;
 
 }
 .linkedin {
   width: 24.98px;
   height: 25.69px;
-  margin: 5px 15px;
+  margin: 0 15px;
 }
 .instagram {
   width: 24.98px;
   height: 25.69px;
-  margin: 5px 15px;
+  margin: 0 15px;
 }
 .copyright-2022-elite-bridge-business-solution-india-llp-all-rights-reserved {
   
@@ -267,6 +268,8 @@ padding: 50px 0;
   height: 56.51px; */
 }
 }
+
+
 `
 
 

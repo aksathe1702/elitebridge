@@ -8,9 +8,10 @@ const Contact = () => {
   const [showForm, setShowForm] = useState(false);
   const [prevContactInfo, setPrevContactInfo] = useState(null);
 
-  const [contactemail , setContactemail] = useState('');
+  const [contactName , setContactName] = useState('');
   const [contactmobile , setContactMobile] = useState('');
   const [contactmsg , setContactmsg] = useState('');
+  const [emaill , setEmaill] = useState('');
 
 
   const handleButtonClick = () => {
@@ -32,7 +33,7 @@ const Contact = () => {
     e.preventDefault();
   
     if (
-      contactemail.trim() === '' ||
+      contactName.trim() === '' ||
       contactmobile.trim() === '' ||
       contactmsg === null
       ) {
@@ -44,14 +45,15 @@ const Contact = () => {
       
   
       firebase.firestore().collection('contactusdata').add({
-        contactemail,contactmobile,contactmsg
+        contactName,contactmobile,contactmsg,emaill
     });
     console.log("Contatct data Daata add")
   
     // Clear form inputs
-    setContactemail('');
+    setContactName('');
     setContactMobile('')
     setContactmsg('');
+    setEmaill('');
     
   };
 
@@ -64,10 +66,10 @@ const Contact = () => {
               <div className='contact'>
                 <div className='contact_form'>
                <br/> <p className='better'>Drop us a Line!</p>
-               <input className="input" type='text' placeholder='Enter your Name'value={contactemail} onChange={(e) => setContactemail(e.target.value)} />
+               <input className="input" type='text' placeholder='Enter your Name'value={contactName} onChange={(e) => setContactName(e.target.value)} />
                <input className="input" type='text' placeholder='Enter your Mobile No'value={contactmobile} pattern="[0-9]{9}" maxLength={10} onChange={(e) => setContactMobile(e.target.value)}/>
+               <input className="input" type='text' placeholder='Enter your Email Id'value={emaill} onChange={(e) => setEmaill(e.target.value)}/>
                <textarea className="textarea" type="text" col="8" placeholder="Enter Your Message" value={contactmsg} onChange={(e) => setContactmsg(e.target.value)} /><br/>
-               <p className='privacy'>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
                <button className='submit_form btn-sep icon-send"' onClick={handleSubmit} onSubmit={handleSubmit} >SEND</button>
               <button onClick={handleCancelClick} className='cancel'>Cancel</button>
             </div>
@@ -82,7 +84,7 @@ const Contact = () => {
               <p className='we'>We love our customers, so feel free to visit during normal business hours.</p>
               <button className='whatsapp'>
                 <a className="wp" href="https://api.whatsapp.com/send/?phone=917774848175&text&type=phone_number&app_absent=0"> 
-                  <img src='/images/whatsapp.svg'/>   Message us on WhatsApp
+                  <img src='/images/whatsapp.png'/>   Message us on WhatsApp
                 </a>
               </button>
               <p className='better'>EliteBridge Business Solutions India LLP</p>
